@@ -47,9 +47,24 @@ p span{
     margin: 10px;
     border: 1px solid black;
     border-radius: 6px;
-    padding: 6px;
-    width: 60px;
+    padding: 10px;
+    width: 80px;
+}
+
+i{
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 4px;
 }
 .quantity{
     margin: 0 13px;
+}
+
+.remove-product{
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
+    margin: 10px;
+    background-color: cadetblue;
+    
 }
