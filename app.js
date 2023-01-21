@@ -17,7 +17,7 @@ productsDiv.addEventListener("click", (event) => {
       if (
         confirm(`
                 ${
-                  event.target.parentElement.querySelector("h2").innerText
+                  event.target.parentElement.parentElement.querySelector("h2").innerText
                 } will be deleted!!!`)
       ) {
         event.target.closest(".product").remove();
@@ -30,3 +30,17 @@ productsDiv.addEventListener("click", (event) => {
     event.target.closest(".product").remove()
   }
 });
+
+const calculateProductPrice = (btn)=>{
+    const productInfoDiv = btn.parentElement.parentElement;
+
+    const price = productInfoDiv.querySelector(".product-price strong").innerText;
+    const quantity = productInfoDiv.querySelector(".quantity").innerText
+    const productTotalDiv = productInfoDiv.querySelector(".price");
+    productTotalDiv.innerText=(price*quantity).toFixed(2);
+}
+
+const calculateCartPrice = ()=>{
+
+}
+
