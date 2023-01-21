@@ -13,20 +13,24 @@ body{
 }
 main{
     width: 70%;
-    height: 600px;
-    background-color:blueviolet
+    height: 900px;
+    background-color:blueviolet;
+    border-radius: 20px;
 }
 #checkout-title{
-    margin: 30px;
+    margin: 20px;
     text-align: center;
 }
 
 .product{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
 }
 img{
-    width: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 20px;
     
 }
@@ -36,7 +40,7 @@ h2{
 
 p strong{
     color:orange;
-    margin: 5px;
+    margin: 3px;
 }
 p span{
     text-decoration: line-through;
@@ -44,7 +48,7 @@ p span{
 .quantity-controller{
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid black;
     border-radius: 6px;
     padding: 10px;
@@ -64,7 +68,11 @@ i{
     padding: 7px;
     border-radius: 7px;
     border: none;
-    margin: 10px;
+    margin: 5px;
     background-color: cadetblue;
-    
+
+}
+
+.product-line-price{
+    margin: 5px;
 }
