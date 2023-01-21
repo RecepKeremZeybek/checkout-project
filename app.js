@@ -43,9 +43,22 @@ const calculateProductPrice = (btn)=>{
 }
 
 const calculateCartPrice = ()=>{
-    const productsTotalPricesDivs = document.querySelectorAll(".product-line-price");
+    const productsTotalPricesDivs = document.querySelectorAll(".price");
     const subTotal =[...productsTotalPricesDivs].reduce((acc, price)=>{acc+Number(price.innerText), 0})
 
+    const taxtPrice = subTotal = localStorage.getItem("taxRate")
+
+    const shippingPrice = parseFloat(subTotal>0 && subTotal< localStorage.getItem("shippingFreePrice")? localStorage.getItem("shippingPrice"):0);
+
+    const totalCart = subTotal + taxtPrice + shippingPrice
+
+    document.querySelector("#subtotalCart").innerText = subTotal.toFixed(2);
+    document.querySelector("#taxRateCart").innerText=taxtPrice.toFixed(2);
+    document.querySelector("#shippingCart").innerText=shippingPrice.toFixed(2);
+    document.querySelector("#totalCart").innerText=totalCart.toFixed(2);
+   
 
 }
+
+
 
