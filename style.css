@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 70%;
+    height: 600px;
+    background-color:blueviolet
+}
+#checkout-title{
+    margin: 30px;
+    text-align: center;
+}
+
+.product{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 200px;
+    border-radius: 20px;
+    
+}
