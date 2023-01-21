@@ -47,6 +47,9 @@ p span{
     margin: 10px;
     border: 1px solid black;
     border-radius: 6px;
-    padding: 5px;
+    padding: 6px;
     width: 60px;
+}
+.quantity{
+    margin: 0 13px;
 }
