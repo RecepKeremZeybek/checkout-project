@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   localStorage.setItem("taxRate", taxRate);
   localStorage.setItem("shippingPrice", shippingPrice);
   localStorage.setItem("shippingFreePrice", shippingFreePrice);
+  calculateCartPrice();
 });
 
 const productsDiv = document.querySelector(".products");
@@ -44,9 +45,9 @@ const calculateProductPrice = (btn)=>{
 
 const calculateCartPrice = ()=>{
     const productsTotalPricesDivs = document.querySelectorAll(".price");
-    const subTotal =[...productsTotalPricesDivs].reduce((acc, price)=>{acc+Number(price.innerText), 0})
+    const subTotal =[...productsTotalPricesDivs].reduce((acc, price)=>acc+Number(price.innerText), 0)
 
-    const taxtPrice = subTotal = localStorage.getItem("taxRate")
+    const taxtPrice = subTotal * localStorage.getItem("taxRate")
 
     const shippingPrice = parseFloat(subTotal>0 && subTotal< localStorage.getItem("shippingFreePrice")? localStorage.getItem("shippingPrice"):0);
 
@@ -57,8 +58,8 @@ const calculateCartPrice = ()=>{
     document.querySelector("#shippingCart").innerText=shippingPrice.toFixed(2);
     document.querySelector("#totalCart").innerText=totalCart.toFixed(2);
    
-
 }
+
 
 
 
