@@ -29,13 +29,14 @@ productsDiv.addEventListener("click", (event) => {
     // event.target.parentElement.parentElement.parentElement.remove()
     event.target.closest(".product").remove()
   }
+  calculateProductPrice(event.target) 
 });
 
 const calculateProductPrice = (btn)=>{
     const productInfoDiv = btn.parentElement.parentElement;
 
-    const price = productInfoDiv.querySelector(".product-price strong").innerText;
-    const quantity = productInfoDiv.querySelector(".quantity").innerText
+    const price = +productInfoDiv.querySelector(".product-price strong").innerText;
+    const quantity = +productInfoDiv.querySelector(".quantity").innerText
     const productTotalDiv = productInfoDiv.querySelector(".price");
     productTotalDiv.innerText=(price*quantity).toFixed(2);
 }
