@@ -30,6 +30,7 @@ productsDiv.addEventListener("click", (event) => {
     event.target.closest(".product").remove()
   }
   calculateProductPrice(event.target) 
+  calculateCartPrice();
 });
 
 const calculateProductPrice = (btn)=>{
@@ -42,6 +43,9 @@ const calculateProductPrice = (btn)=>{
 }
 
 const calculateCartPrice = ()=>{
+    const productsTotalPricesDivs = document.querySelectorAll(".product-line-price");
+    const subTotal =[...productsTotalPricesDivs].reduce((acc, price)=>{acc+Number(price.innerText), 0})
+
 
 }
 
